@@ -48,7 +48,9 @@ public class DevicesHandler implements HttpHandler {
                 String resultJson = mapper.writeValueAsString(new ErrorMessage(ex.getMessage()));
                 nok(exchange, resultJson);
             }
-        } else if (url.endsWith("/ports")) {
+        } else
+            if (url.endsWith("/ports")) {
+            //devices/1/port
             String deviceIdValue = url.replaceAll("\\D+", "");
             LOGGER.trace("deviceIdValue: {}", deviceIdValue);
             if (deviceIdValue.isEmpty()) {
@@ -64,6 +66,7 @@ public class DevicesHandler implements HttpHandler {
                 nok(exchange, ex.getMessage());
             }
         } else {
+                //device/1
             String deviceIdValue = url.substring(url.lastIndexOf('/') + 1);
             LOGGER.trace("deviceIdValue: {}", deviceIdValue);
             if (deviceIdValue.isEmpty()) {
