@@ -17,4 +17,10 @@ class MathTest {
     void should_return_true(){
         assertTrue(true);
     }
+
+
+    @Test
+    void sho() {
+        assertTrue(true);
+    }
 }
