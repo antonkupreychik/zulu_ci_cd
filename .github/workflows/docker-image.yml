@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: zulu/zulu_ci_cd:latest
+          tags: yqpuss/zulu_ci_cd:latest
