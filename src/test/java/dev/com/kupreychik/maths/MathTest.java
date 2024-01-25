@@ -13,4 +13,14 @@ class MathTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> math.add(null, 1));
     }
 
+    @Test
+    void should_return_true(){
+        assertTrue(true);
+    }
+
+
+    @Test
+    void sho() {
+        assertTrue(true);
+    }
 }
